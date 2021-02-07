@@ -22,6 +22,7 @@
     "@babel/core": "^7.12.13",
     "@babel/preset-env": "^7.12.13",
     "@babel/polyfill": "^7.12.1",
-    "@babel/preset-react": "^7.12.13"
+    "@babel/preset-react": "^7.12.13",
+    "webpack-dev-server": "^3.11.2"
   }}
 
