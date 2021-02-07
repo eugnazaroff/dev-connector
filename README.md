@@ -1,2 +1,2 @@
-# dev-connector
-Full stack JS social network
+# evently
+Full stack JS event tracker app
