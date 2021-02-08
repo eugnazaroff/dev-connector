@@ -1,21 +1,21 @@
-const path = require("path");
-const HTMLWebpackPlugin = require("html-webpack-plugin");
+const path = require('path')
+const HTMLWebpackPlugin = require('html-webpack-plugin')
 
 module.exports = {
-    mode: "development",
-    entry: "./index.js",
+    mode: 'development',
+    entry: './index.js',
     output: {
-        filename: "[name].[contenthash].js",
-        path: path.resolve(__dirname, "dist"),
+        filename: '[name].[contenthash].js',
+        path: path.resolve(__dirname, 'dist'),
     },
 
     plugins: [
         new HTMLWebpackPlugin({
-            template: "./src/index.html",
+            template: './src/index.html',
         }),
     ],
     resolve: {
-        extensions: [".js"],
+        extensions: ['.js'],
     },
     module: {
         rules: [
@@ -23,31 +23,29 @@ module.exports = {
                 test: /\.s[ac]ss$/i,
                 use: [
                     // Creates `style` nodes from JS strings
-                    "style-loader",
+                    'style-loader',
                     // Translates CSS into CommonJS
-                    "css-loader",
+                    'css-loader',
                     // Compiles Sass to CSS
-                    "sass-loader",
+                    'sass-loader',
                 ],
             },
             {
                 test: /\.m?js$/,
                 exclude: /node_modules/,
                 use: {
-                    loader: "babel-loader",
+                    loader: 'babel-loader',
                     options: {
-                        presets: [["@babel/preset-env", { targets: "defaults" }]],
+                        presets: [
+                            ['@babel/preset-env', { targets: 'defaults' }],
+                        ],
                     },
                 },
             },
         ],
     },
     devServer: {
+        historyApiFallback: true,
         port: 8080,
-        proxy: {
-            "/api": {
-                target: "http://localhost:3000",
-            },
-        },
     },
-};
+}

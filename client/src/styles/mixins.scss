@@ -1,0 +1,48 @@
+@mixin auth-form {
+    width: 400px;
+    height: 80vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    &__container {
+        overflow: hidden;
+        width: 100%;
+        border: 1px solid lightgray;
+        border-radius: 20px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    &__heading {
+        font-size: 4rem;
+        background: lightgreen;
+        display: block;
+        width: 100%;
+        text-align: center;
+        padding: 25px;
+        margin-bottom: 15px;
+    }
+
+    &__input {
+        margin: 0;
+        font-size: 2rem;
+        padding: 5px;
+        &::placeholder {
+            font-size: 1.5rem;
+        }
+    }
+
+    &__submit {
+        margin-top: 15px;
+        margin-bottom: 15px;
+        background: lightblue;
+        border-radius: 10px;
+        padding: 10px;
+        color: black;
+        border: none;
+        cursor: pointer;
+        font-weight: bold;
+    }
+}

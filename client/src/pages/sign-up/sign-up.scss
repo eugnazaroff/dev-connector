@@ -1,0 +1,8 @@
+@use './src/styles/mixins';
+
+.signup-form {
+    @include mixins.auth-form;
+}
+
+.form-heading {
+}
