@@ -1,0 +1,40 @@
+.event-card {
+    width: 180px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    border: 1px solid black;
+    border-radius: 10px;
+    padding: 35px;
+    cursor: pointer;
+
+    &:hover {
+        animation: hovering 1.3s ease-in alternate infinite;
+    }
+
+    &__title {
+        font-size: 3rem;
+    }
+    &__description {
+        text-align: left;
+        font-size: 2rem;
+    }
+
+    &__image {
+        max-width: 100%;
+    }
+}
+
+@keyframes hovering {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.03);
+        box-shadow: 1px 3px 1px black;
+    }
+    100% {
+        transform: scale(1);
+    }
+}

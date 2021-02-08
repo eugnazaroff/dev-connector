@@ -46,11 +46,14 @@ module.exports = {
     },
     devServer: {
         historyApiFallback: true,
+<<<<<<< HEAD
         proxy: {
             '/api': {
                 target: 'http://localhost:5000/',
             },
         },
+=======
+>>>>>>> origin/client
         port: 8080,
     },
 }
