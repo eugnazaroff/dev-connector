@@ -1,0 +1,27 @@
+.navbar {
+    width: 100%;
+    background: lightcoral;
+    color: #fff;
+
+    &__container {
+        padding: 20px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    &__menu {
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        width: 40%;
+    }
+    &__logo {
+        font-size: 2.4rem;
+    }
+
+    &__link {
+        color: #fff;
+        text-decoration: none;
+        font-size: 1.9rem;
+    }
+}
